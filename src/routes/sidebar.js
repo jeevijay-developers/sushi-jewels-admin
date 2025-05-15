@@ -56,7 +56,16 @@ const sidebar = [
     icon: FiCompass,
     name: "Orders",
   },
-
+  {
+    path: "/telecallers", // the url
+    icon: FiGrid, // icon
+    name: "Telecallers", // name that appear in Sidebar
+  },
+  {
+    path: "/generalquery", // the url
+    icon: FiGrid, // icon
+    name: "GeneralQuery", // name that appear in Sidebar
+  },
   {
     path: "/our-staff",
     icon: FiUser,
@@ -120,11 +129,6 @@ const sidebar = [
     ],
   },
 
-  // {
-  //   path: "/telecallers", // the url
-  //   icon: FiGrid, // icon
-  //   name: "Telecallers", // name that appear in Sidebar
-  // },
   // {
   //   path: "/storepartners", // the url
   //   icon: FiGrid, // icon

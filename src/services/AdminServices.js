@@ -31,6 +31,10 @@ const AdminServices = {
   getAllTelecallers: async (body) => {
     return requests.get("tele/telecallers/all", body);
   },
+  getAllQuery: async (body) => {
+    return requests.get("/query/getQuery", body);
+  },
+
   getAllStaff: async (body) => {
     return requests.get("/admin", body);
   },

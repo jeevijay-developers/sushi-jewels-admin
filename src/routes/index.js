@@ -1,3 +1,4 @@
+
 import { lazy } from "react";
 
 // use lazy for better code splitting
@@ -25,7 +26,10 @@ const StoreHome = lazy(() => import("@/pages/StoreHome"));
 const StoreSetting = lazy(() => import("@/pages/StoreSetting"));
 const Notifications = lazy(() => import("@/pages/Notifications"));
 const Partner = lazy(() => import("@/pages/Partner"));
-const Telecallers = lazy(() => import("@/pages/Telecallers"));
+// const Telecallers = lazy(() => import("@/pages/GeneralQuery"));
+// const Telecallers = lazy(() => import("@/pages/Telecallers"));
+const Telecallers = lazy(() => import("@/pages/GeneralQuery"));
+import GeneralQuery from "@/pages/GeneralQuery";
 /*
 //  * ⚠ These are internal routes!
 //  * They will be rendered inside the app, using the default `containers/Layout`.
@@ -90,6 +94,10 @@ const routes = [
   {
     path: "/telecallers",
     component: Telecallers,
+  },
+  {
+    path: "/generalquery",
+    component: GeneralQuery,
   },
   {
     path: "/storepartners",
@@ -161,6 +169,7 @@ const routeAccessList = [
   { label: "Order Invoice", value: "order" },
   { label: "Edit Profile", value: "edit-profile" },
   { label: "Telecallers", value: "telecallers" },
+  { label: "GeneralQuery", value: "generalquery" },
   { label: "Store Partner", value: "storepartners" },
   {
     label: "Customer Order",

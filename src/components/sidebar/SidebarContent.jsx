@@ -88,7 +88,7 @@ const SidebarContent = () => {
           )
         )}
       </ul>
-      <span className="lg:fixed bottom-0 px-6 py-6 w-64 mx-auto relative mt-3 block">
+      <span className=" bottom-0 px-6 py-6 w-64 mx-auto  mt-3 block">
         <Button onClick={handleLogOut} size="large" className="w-full">
           <span className="flex items-center">
             <IoLogOutOutline className="mr-3 text-lg" />
