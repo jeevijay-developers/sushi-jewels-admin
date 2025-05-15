@@ -115,7 +115,7 @@ const OrderInvoice = () => {
                   {/* {mode === "dark" ? (
                     <img src={logoDark} alt="kachabazar" width="110" />
                   ) : ( */}
-                  <img src={logoLight} alt="ocentury" width="110" />
+                  <img src={logoLight} alt="Sushi Jewels" width="110" />
                   {/* )} */}
                 </h2>
                 <div className="text-sm  text-gray-500">

@@ -59,10 +59,9 @@ export default defineConfig({
         scope: ".",
         start_url: ".",
         id: ".",
-        short_name: "Ocentury - E-Commerce Website",
-        name: "Ocentury | eCommerce Admin Dashboard",
-        description:
-          "Ocentury :  e-commerce Admin Dashboard",
+        short_name: "Sushi Jewels - E-Commerce Website",
+        name: "Sushi Jewels | eCommerce Admin Dashboard",
+        description: "Sushi Jewels :  e-commerce Admin Dashboard",
         icons: [
           {
             src: "favicon.ico",
