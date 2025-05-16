@@ -42,7 +42,7 @@ const GeneralQuery = () => {
   const { data, loading, error } = useAsync(() =>
     AdminServices.getAllQuery()
   );
-
+  console.log("query data", data);
   const {
     userRef,
     setRole,
@@ -52,10 +52,10 @@ const GeneralQuery = () => {
     serviceData,
     handleChangePage,
     handleSubmitUser,
-  } = useFilter(data);
+  } = useFilter(data.queries);
 
   const { t } = useTranslation();
-  console.log(dataTable);
+ 
 
   // handle reset filed
   const handleResetField = () => {
@@ -69,70 +69,6 @@ const GeneralQuery = () => {
         <StaffDrawer />
       </MainDrawer>
 
-      {/* <AnimatedContent>
-        <Card className="min-w-0 shadow-xs overflow-hidden bg-white dark:bg-gray-800 mb-5">
-          <CardBody>
-            <form
-              onSubmit={handleSubmitUser}
-              className="py-3 grid gap-4 lg:gap-6 xl:gap-6 md:flex xl:flex"
-            >
-              <div className="flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
-                <Input
-                  ref={userRef}
-                  type="search"
-                  name="search"
-                  placeholder={t("StaffSearchBy")}
-                />
-                <button
-                  type="submit"
-                  className="absolute right-0 top-0 mt-5 mr-1"
-                ></button>
-              </div>
-              <div className="flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
-                <Select onChange={(e) => setRole(e.target.value)}>
-                  <option value="All" defaultValue hidden>
-                    {t("StaffRole")}
-                  </option>
-                  <option value="Admin">{t("StaffRoleAdmin")}</option>
-                  <option value="Cashier">{t("SelectCashiers")}</option>
-                  <option value="Super Admin">{t("SelectSuperAdmin")}</option>
-                </Select>
-              </div>
-
-              <div className="w-full md:w-56 lg:w-56 xl:w-56">
-                <Button
-                  onClick={toggleDrawer}
-                  className="w-full rounded-md h-12"
-                >
-                  <span className="mr-3">
-                    <FiPlus />
-                  </span>
-                  {t("AddStaff")}
-                </Button>
-              </div>
-              <div className="mt-2 md:mt-0 flex items-center xl:gap-x-4 gap-x-1 flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
-                <div className="w-full mx-1">
-                  <Button type="submit" className="h-12 w-full bg-emerald-700">
-                    Filter
-                  </Button>
-                </div>
-
-                <div className="w-full">
-                  <Button
-                    layout="outline"
-                    onClick={handleResetField}
-                    type="reset"
-                    className="px-4 md:py-1 py-3 text-sm dark:bg-gray-700"
-                  >
-                    <span className="text-black dark:text-gray-200">Reset</span>
-                  </Button>
-                </div>
-              </div>
-            </form>
-          </CardBody>
-        </Card>
-      </AnimatedContent> */}
-
       {loading ? (
         // <Loading loading={loading} />
         <TableLoading row={12} col={7} width={163} height={20} />
@@ -144,20 +80,10 @@ const GeneralQuery = () => {
             <TableHeader>
               <tr>
                 <TableCell>{"name"}</TableCell>
-                <TableCell>{"email"}</TableCell>
-                <TableCell>{"mobile"}</TableCell>
-                <TableCell>{"city"}</TableCell>
-                <TableCell>{"state"}</TableCell>
-                <TableCell className="text-center">{"Pincode"}</TableCell>
-                <TableCell className="text-center">{"PAN"}</TableCell>
-
-                <TableCell className="text-center">{"AADHAR"}</TableCell>
-                <TableCell className="text-center">{"Account NO."}</TableCell>
-                <TableCell className="text-center">{"IFSC"}</TableCell>
-                <TableCell className="text-center">
-                  {"ACC. Holder Name"}
-                </TableCell>
-                <TableCell className="text-center">{"Status"}</TableCell>
+                <TableCell>{"jewelleryType"}</TableCell>
+                <TableCell>{"budget"}</TableCell>
+                <TableCell>{"phone"}</TableCell>
+                <TableCell>{"message"}</TableCell>
               </tr>
             </TableHeader>
 

@@ -27,7 +27,7 @@ const GeneralQueryTable = ({ staffs, lang }) => {
     isSubmitting,
     handleResetPassword,
   } = useToggleDrawer();
-  console.log(staffs);
+  console.log("staff",staffs);
 
   const { showDateFormat, showingTranslateValue } = useUtilsFunction();
   // State for access list modal

@@ -27,9 +27,9 @@ const StoreSetting = lazy(() => import("@/pages/StoreSetting"));
 const Notifications = lazy(() => import("@/pages/Notifications"));
 const Partner = lazy(() => import("@/pages/Partner"));
 // const Telecallers = lazy(() => import("@/pages/GeneralQuery"));
-// const Telecallers = lazy(() => import("@/pages/Telecallers"));
-const Telecallers = lazy(() => import("@/pages/GeneralQuery"));
-import GeneralQuery from "@/pages/GeneralQuery";
+const Telecallers = lazy(() => import("@/pages/Telecallers"));
+const GeneralQuery = lazy(() => import("@/pages/GeneralQuery"));
+// import GeneralQuery from "@/pages/GeneralQuery";
 /*
 //  * ⚠ These are internal routes!
 //  * They will be rendered inside the app, using the default `containers/Layout`.
