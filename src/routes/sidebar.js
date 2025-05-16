@@ -17,12 +17,16 @@ import {
  * `routes/index.js`
  */
 const sidebar = [
+  // {
+  //   path: "/dashboard", // the url
+  //   icon: FiGrid, // icon
+  //   name: "Dashboard", // name that appear in Sidebar
+  // },
   {
-    path: "/dashboard", // the url
+    path: "/generalquery", // the url
     icon: FiGrid, // icon
-    name: "Dashboard", // name that appear in Sidebar
+    name: "GeneralQuery", // name that appear in Sidebar
   },
-
   {
     icon: FiSlack,
     name: "Catalog",
@@ -39,10 +43,10 @@ const sidebar = [
         path: "/attributes",
         name: "Attributes",
       },
-      {
-        path: "/coupons",
-        name: "Coupons",
-      },
+      // {
+      //   path: "/coupons",
+      //   name: "Coupons",
+      // },
     ],
   },
 
@@ -51,21 +55,17 @@ const sidebar = [
     icon: FiUsers,
     name: "Customers",
   },
-  {
-    path: "/orders",
-    icon: FiCompass,
-    name: "Orders",
-  },
-  {
-    path: "/telecallers", // the url
-    icon: FiGrid, // icon
-    name: "Telecallers", // name that appear in Sidebar
-  },
-  {
-    path: "/generalquery", // the url
-    icon: FiGrid, // icon
-    name: "GeneralQuery", // name that appear in Sidebar
-  },
+  // {
+  //   path: "/orders",
+  //   icon: FiCompass,
+  //   name: "Orders",
+  // },
+  // {
+  //   path: "/telecallers", // the url
+  //   icon: FiGrid, // icon
+  //   name: "Telecallers", // name that appear in Sidebar
+  // },
+
   {
     path: "/our-staff",
     icon: FiUser,
@@ -112,22 +112,22 @@ const sidebar = [
     ],
   },
 
-  {
-    icon: FiSlack,
-    name: "Pages",
-    routes: [
-      // submenu
+  // {
+  //   icon: FiSlack,
+  //   name: "Pages",
+  //   routes: [
+  //     // submenu
 
-      {
-        path: "/404",
-        name: "404",
-      },
-      {
-        path: "/coming-soon",
-        name: "Coming Soon",
-      },
-    ],
-  },
+  //     {
+  //       path: "/404",
+  //       name: "404",
+  //     },
+  //     {
+  //       path: "/coming-soon",
+  //       name: "Coming Soon",
+  //     },
+  //   ],
+  // },
 
   // {
   //   path: "/storepartners", // the url

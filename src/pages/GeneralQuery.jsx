@@ -54,6 +54,8 @@ const GeneralQuery = () => {
     handleSubmitUser,
   } = useFilter(data.queries);
 
+  console.log("dataTable", serviceData);
+
   const { t } = useTranslation();
  
 
@@ -70,34 +72,37 @@ const GeneralQuery = () => {
       </MainDrawer>
 
       {loading ? (
-        // <Loading loading={loading} />
         <TableLoading row={12} col={7} width={163} height={20} />
       ) : error ? (
         <span className="text-center mx-auto text-red-500">{error}</span>
       ) : serviceData?.length !== 0 ? (
-        <TableContainer className="mb-8 rounded-b-lg">
-          <Table>
-            <TableHeader>
-              <tr>
-                <TableCell>{"name"}</TableCell>
-                <TableCell>{"jewelleryType"}</TableCell>
-                <TableCell>{"budget"}</TableCell>
-                <TableCell>{"phone"}</TableCell>
-                <TableCell>{"message"}</TableCell>
-              </tr>
-            </TableHeader>
+        <>
+        
 
-            <GeneralQueryTable staffs={data.queries} lang={lang} />
-          </Table>
-          <TableFooter>
-            <Pagination
-              totalResults={totalResults}
-              resultsPerPage={resultsPerPage}
-              onChange={handleChangePage}
-              label="Table navigation"
-            />
-          </TableFooter>
-        </TableContainer>
+          <TableContainer className="mb-8 rounded-b-lg">
+            <Table>
+              <TableHeader>
+                <tr>
+                  <TableCell>{"name"}</TableCell>
+                  <TableCell>{"jewelleryType"}</TableCell>
+                  <TableCell>{"budget"}</TableCell>
+                  <TableCell>{"phone"}</TableCell>
+                  <TableCell>{"message"}</TableCell>
+                </tr>
+              </TableHeader>
+
+              <GeneralQueryTable staffs={serviceData} lang={lang} />
+            </Table>
+            <TableFooter>
+              <Pagination
+                totalResults={totalResults}
+                resultsPerPage={resultsPerPage}
+                onChange={handleChangePage}
+                label="Table navigation"
+              />
+            </TableFooter>
+          </TableContainer>
+        </>
       ) : (
         <NotFound title="Sorry, There are no Query right now." />
       )}
