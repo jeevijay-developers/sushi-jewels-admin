@@ -6,8 +6,9 @@ import {
   TableHeader,
   TableFooter,
 } from "@windmill/react-ui";
-import ReactPaginate from "react-paginate"; // ← Import here
+import ReactPaginate from "react-paginate"; 
 import { useTranslation } from "react-i18next";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 import PageTitle from "@/components/Typography/PageTitle";
 import MainDrawer from "@/components/drawer/MainDrawer";
@@ -28,7 +29,7 @@ const GeneralQuery = () => {
   const [queries, setQueries] = useState([]);
   const [totalQueries, setTotalQueries] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [resultsPerPage] = useState(5);
+  const [resultsPerPage] = useState(10);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [result, setResult] = useState([]);
@@ -90,8 +91,8 @@ const GeneralQuery = () => {
           <TableFooter>
             <div className="flex justify-center p-4">
               <ReactPaginate
-                previousLabel={"←"}
-                nextLabel={"→"}
+                previousLabel={<IoIosArrowDropleft className="w-7 h-7" />}
+                nextLabel={<IoIosArrowDropright className="w-7 h-7" />}
                 breakLabel={"..."}
                 breakClassName={"break-me"}
                 pageCount={totalPages}

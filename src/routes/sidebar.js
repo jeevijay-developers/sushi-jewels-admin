@@ -50,11 +50,11 @@ const sidebar = [
     ],
   },
 
-  {
-    path: "/customers",
-    icon: FiUsers,
-    name: "Customers",
-  },
+  // {
+  //   path: "/customers",
+  //   icon: FiUsers,
+  //   name: "Customers",
+  // },
   // {
   //   path: "/orders",
   //   icon: FiCompass,
