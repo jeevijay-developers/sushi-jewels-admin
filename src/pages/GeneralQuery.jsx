@@ -59,7 +59,8 @@ const GeneralQuery = () => {
     setCurrentPage(selectedPage);
   };
 
-  const totalPages = Math.ceil(totalQueries / resultsPerPage);
+  const totalPages = result?.totalPages ?? 1
+  // const totalPages = Math.ceil(totalQueries / resultsPerPage);
 
   return (
     <>
