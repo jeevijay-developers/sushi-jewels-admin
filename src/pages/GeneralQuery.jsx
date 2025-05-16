@@ -87,7 +87,7 @@ const GeneralQuery = () => {
               </tr>
             </TableHeader>
 
-            <GeneralQueryTable staffs={dataTable} lang={lang} />
+            <GeneralQueryTable staffs={data.queries} lang={lang} />
           </Table>
           <TableFooter>
             <Pagination

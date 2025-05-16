@@ -13,7 +13,7 @@ import StaffDrawer from "@/components/drawer/StaffDrawer";
 import DeleteModal from "@/components/modal/DeleteModal";
 import EditDeleteButton from "@/components/table/EditDeleteButton";
 import ActiveInActiveButton from "@/components/table/ActiveInActiveButton";
-import AccessListModal from "@/components/modal/AccessListModal";
+import ViewQueryMessage from "@/components/modal/ViewQueryMessage";
 import AdminServices from "@/services/AdminServices";
 import { toast } from "react-toastify";
 import useAsync from "@/hooks/useAsync";
@@ -82,7 +82,7 @@ const GeneralQueryTable = ({ staffs, lang }) => {
       <DeleteModal id={serviceId} title={title} />
       {/* Access List Modal */}
       {isAccessModalOpen && (
-        <AccessListModal
+        <ViewQueryMessage
           staff={selectedStaff}
           isOpen={isAccessModalOpen}
           onClose={handleAccessModalClose}
@@ -113,64 +113,19 @@ const GeneralQueryTable = ({ staffs, lang }) => {
             </TableCell> */}
 
             <TableCell>
-              <span className="text-sm">{staff.name}</span>{" "}
+              <span className="text-sm">{staff.fullName}</span>{" "}
             </TableCell>
             <TableCell>
-              <span className="text-sm ">{staff.email}</span>
+              <span className="text-sm ">{staff.jewelleryType}</span>
             </TableCell>
             <TableCell>
-              <span className="text-sm ">{staff.mobile}</span>
+              <span className="text-sm ">{staff.budget}</span>
             </TableCell>
             <TableCell>
-              <span className="text-sm ">{staff.city}</span>
+              <span className="text-sm ">{staff.phone}</span>
             </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.state}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.pinCode}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.pan}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.aadhar}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.bankAccNumber}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.IFSC}</span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm ">{staff.accountHolderName}</span>
-            </TableCell>
-            <TableCell>
-              <select
-                className="px-2 py-1 rounded-md bg-white text-black"
-                value={staffStatus[staff._id]}
-                id=""
-                onChange={(e) => {
-                  handleStatusChange(e, staff._id);
-                }}
-              >
-                <option value="Accepted">Active</option>
-                <option value="Hold">Hold</option>
-                <option value="Rejected">Rejected</option>
-              </select>
-              {/* <span className="text-sm ">{staff.status}</span> */}
-            </TableCell>
-
             {/* <TableCell>
-              <span className="text-sm">
-                {showDateFormat(staff.joiningData)}
-              </span>
-            </TableCell>
-            <TableCell>
-              <span className="text-sm font-semibold">{staff?.role}</span>
-            </TableCell>
-            <TableCell className="text-center text-xs">
-              <Status status={staff.status} />
+              <span className="text-sm ">{staff.message}</span>
             </TableCell> */}
 
             {/* <TableCell className="text-center">
@@ -180,7 +135,7 @@ const GeneralQueryTable = ({ staffs, lang }) => {
                 option="staff"
                 status={staff.status}
               />
-            </TableCell>
+            </TableCell> */}
 
             <TableCell>
               <div className="flex justify-between items-center">
@@ -188,14 +143,15 @@ const GeneralQueryTable = ({ staffs, lang }) => {
                   onClick={() => handleAccessModalOpen(staff)}
                   className="text-gray-400"
                 >
+                  view message
                   <Tooltip
                     id="view"
                     Icon={FiZoomIn}
-                    title="View Access Route"
+                    title="view message"
                     bgColor="#059669"
                   />
                 </button>
-                <EditDeleteButton
+                {/* <EditDeleteButton
                   id={staff._id}
                   staff={staff}
                   isSubmitting={isSubmitting}
@@ -203,9 +159,9 @@ const GeneralQueryTable = ({ staffs, lang }) => {
                   handleModalOpen={handleModalOpen}
                   handleResetPassword={handleResetPassword}
                   title={showingTranslateValue(staff?.name)}
-                />
+                /> */}
               </div>
-            </TableCell> */}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
