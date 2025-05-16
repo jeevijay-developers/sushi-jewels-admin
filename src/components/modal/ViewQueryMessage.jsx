@@ -18,13 +18,16 @@ const ViewQueryMessage = ({
       </h1>
       <ModalBody>
         {staff ? (
-          <div>{staff?.message}</div>
+          <div className="max-h-[60vh] overflow-y-auto whitespace-pre-wrap break-words text-gray-800 dark:text-gray-200 p-2 rounded bg-gray-50 dark:bg-gray-800">
+            {staff.message}
+          </div>
         ) : (
           <p className="text-orange-500 py-10 text-lg text-center">
             No Message found
           </p>
         )}
       </ModalBody>
+
       <ModalFooter className="justify-end">
         <Button
           className="w-full sm:w-auto bg-red-400 text-white hover:bg-red-500"

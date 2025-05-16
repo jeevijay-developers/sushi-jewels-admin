@@ -138,18 +138,18 @@ const GeneralQueryTable = ({ staffs, lang }) => {
             </TableCell> */}
 
             <TableCell>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center ">
                 <button
                   onClick={() => handleAccessModalOpen(staff)}
-                  className="text-gray-400"
+                  className="text-emerald-600 hover:text-emerald-800 flex items-center gap-2 transition"
                 >
-                  view message
-                  <Tooltip
+                  <div>view message</div>
+                  {/* <Tooltip
                     id="view"
                     Icon={FiZoomIn}
                     title="view message"
                     bgColor="#059669"
-                  />
+                  /> */}
                 </button>
                 {/* <EditDeleteButton
                   id={staff._id}

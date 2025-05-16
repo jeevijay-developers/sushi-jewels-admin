@@ -64,7 +64,7 @@ const GeneralQuery = () => {
   };
   return (
     <>
-      <PageTitle>{"Our Partners"} </PageTitle>
+      <PageTitle>{"General Query"} </PageTitle>
       <MainDrawer>
         <StaffDrawer />
       </MainDrawer>
@@ -99,7 +99,7 @@ const GeneralQuery = () => {
           </TableFooter>
         </TableContainer>
       ) : (
-        <NotFound title="Sorry, There are no staff right now." />
+        <NotFound title="Sorry, There are no Query right now." />
       )}
     </>
   );
