@@ -11,10 +11,10 @@ const ViewQueryMessage = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <h1 className="text-xl font-medium text-center pb-6 dark:text-gray-300">
-        Message From {staff?.fullName}
-        <span className="text-emerald-600">
-          {showingTranslateValue(staff?.fullName)}
-        </span>
+        Message From {staff?.name}
+        {/* <span className="text-emerald-600">
+          {showingTranslateValue(staff?.name)}
+        </span> */}
       </h1>
       <ModalBody>
         {staff ? (
