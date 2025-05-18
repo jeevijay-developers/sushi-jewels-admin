@@ -38,6 +38,9 @@ const AdminServices = {
   getAllQuery: (page, limit) => {
     return requests.get(`/query/getQuery?page=${page}&limit=${limit}`);
   },
+  getProductQuery: (page, limit) => {
+    return requests.get(`/query/getProductQuery?page=${page}&limit=${limit}`);
+  },
 
   getAllStaff: async (body) => {
     return requests.get("/admin", body);

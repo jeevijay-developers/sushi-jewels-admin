@@ -1,4 +1,5 @@
 
+
 import { lazy } from "react";
 
 // use lazy for better code splitting
@@ -29,6 +30,7 @@ const Partner = lazy(() => import("@/pages/Partner"));
 // const Telecallers = lazy(() => import("@/pages/GeneralQuery"));
 const Telecallers = lazy(() => import("@/pages/Telecallers"));
 const GeneralQuery = lazy(() => import("@/pages/GeneralQuery"));
+const ProductQuery = lazy(() => import("@/pages/ProductQuery"));
 // import GeneralQuery from "@/pages/GeneralQuery";
 /*
 //  * ⚠ These are internal routes!
@@ -98,6 +100,10 @@ const routes = [
   {
     path: "/generalquery",
     component: GeneralQuery,
+  },
+  {
+    path: "/productquery",
+    component: ProductQuery,
   },
   {
     path: "/storepartners",

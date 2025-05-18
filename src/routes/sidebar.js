@@ -28,6 +28,11 @@ const sidebar = [
     name: "GeneralQuery", // name that appear in Sidebar
   },
   {
+    path: "/productquery", // the url
+    icon: FiGrid, // icon
+    name: "ProductQuery", // name that appear in Sidebar
+  },
+  {
     icon: FiSlack,
     name: "Catalog",
     routes: [
