@@ -93,7 +93,7 @@ const SignUp = () => {
                   disabled={loading}
                   type="submit"
                   className="mt-4 h-12 w-full"
-                  to="/dashboard"
+                  to="/generalquery"
                   block
                 >
                   {t("CreateAccountTitle")}

@@ -358,7 +358,7 @@ const Header = () => {
               {profileOpen && (
                 <ul className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 focus:outline-none">
                   <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
-                    <Link to="/dashboard">
+                    <Link to="/generalquery">
                       <span className="flex items-center text-sm">
                         <FiGrid className="w-4 h-4 mr-3" aria-hidden="true" />
                         <span>{t("Dashboard")}</span>

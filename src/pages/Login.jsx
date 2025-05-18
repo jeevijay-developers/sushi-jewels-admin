@@ -72,14 +72,14 @@ const Login = () => {
                       disabled={loading}
                       type="submit"
                       className={`bg-emerald-600 rounded-md mt-4 h-12 w-full`}
-                      to="/dashboard"
+                      to="/generalquery"
                     />
                   ) : (
                     <Button
                       disabled={loading}
                       type="submit"
                       className="mt-4 h-12 w-full"
-                      to="/dashboard"
+                      to="/generalquery"
                     >
                       {t("LoginTitle")}
                     </Button>

@@ -35,7 +35,7 @@ const useLoginSubmit = () => {
             sameSite: "None",
             secure: true,
           });
-          history.replace("/dashboard");
+          history.replace("/generalquery");
         }
       }
 

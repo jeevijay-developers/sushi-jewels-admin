@@ -9,7 +9,7 @@ const NotFoundPage = () => {
   useEffect(() => {
     // Redirect if the path is root '/'
     if (path === "/") {
-      window.location.replace("/dashboard");
+      window.location.replace("/generalquery");
     }
   }, [path]);
 
